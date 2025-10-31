@@ -135,3 +135,59 @@ window.onclick = (e) => {
 };
 
 renderGames();
+
+// --- Search Functionality ---
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
+
+  const filteredGames = games.filter(
+    (g) =>
+      g.title.toLowerCase().includes(query) ||
+      g.desc.toLowerCase().includes(query) ||
+      g.creator.toLowerCase().includes(query)
+  );
+
+  // Re-render based on search
+  originalsContainer.innerHTML = "";
+  devContainer.innerHTML = "";
+
+  filteredGames.forEach((g, i) => {
+    const card = document.createElement("div");
+    card.className = "game-card";
+    card.innerHTML = `
+      <div class="thumb">
+        <img src="${g.thumb}" alt="${g.title}">
+        <video class="preview-video" muted loop preload="metadata">
+          <source src="${g.video}" type="video/mp4">
+        </video>
+      </div>
+      <div class="game-info">
+        <h3>${g.title}</h3>
+        <p class="credits">Credits: ${g.creator}</p>
+        <button class="play-btn">How to Play</button>
+      </div>
+    `;
+
+    // Hover preview
+    const img = card.querySelector("img");
+    const vid = card.querySelector("video");
+    card.addEventListener("mouseenter", () => {
+      img.style.display = "none";
+      vid.style.display = "block";
+      vid.play().catch(()=>{});
+    });
+    card.addEventListener("mouseleave", () => {
+      vid.pause();
+      vid.style.display = "none";
+      img.style.display = "block";
+    });
+
+    // Open modal
+    card.querySelector(".play-btn").addEventListener("click", () => openModal(g));
+
+    if (games.indexOf(g) < 5) originalsContainer.appendChild(card);
+    else devContainer.appendChild(card);
+  });
+});
