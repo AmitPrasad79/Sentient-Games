@@ -84,7 +84,7 @@ function renderGames() {
       </div>
       <div class="game-info">
         <h3>${g.title}</h3>
-        <p>${g.desc.split("How to Play")[0]}</p>
+        <p class="credits">Credits: ${g.creator}</p>
         <button class="play-btn">How to Play</button>
       </div>
     `;
