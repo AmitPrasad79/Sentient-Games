@@ -10,7 +10,6 @@ const games = [
         <li>🚧 Avoid obstacles or lose a life.</li>
         <li>🎯 Survive as long as you can to set a high score.</li>
       </ul>
-      <p><b>Link:</b> <a href="https://sentient-dog-runner.vercel.app" target="_blank">sentient-dog-runner.vercel.app</a></p>
     `,
     creator: "0xBalls",
     creatorLink: "https://twitter.com/0xBalls",
@@ -29,7 +28,6 @@ const games = [
         <li>Prevent the ball from passing your paddle.</li>
         <li>Score 10 points to win!</li>
       </ul>
-      <p><b>Link:</b> <a href="https://sentient-pong.vercel.app" target="_blank">sentient-pong.vercel.app</a></p>
     `,
     creator: "0xBalls",
     creatorLink: "https://twitter.com/0xBalls",
@@ -48,7 +46,6 @@ const games = [
         <li>Clear the board before time runs out.</li>
         <li>Track your score and speed with each match.</li>
       </ul>
-      <p><b>Link:</b> <a href="https://sentient-memory-match.vercel.app" target="_blank">sentient-memory-match.vercel.app</a></p>
     `,
     creator: "0xBalls",
     creatorLink: "https://twitter.com/0xBalls",
@@ -67,7 +64,6 @@ const games = [
         <li>Preview the image before countdown starts.</li>
         <li>One extra empty tile lets you move tiles easily.</li>
       </ul>
-      <p><b>Link:</b> <a href="https://sentient-memory-match.vercel.app" target="_blank">sentient-puzzle-slide.vercel.app</a></p>
     `,
     creator: "0xBalls",
     creatorLink: "https://twitter.com/0xBalls",
@@ -89,7 +85,6 @@ const games = [
         <li>🔁 Reset or Restart anytime.</li>
         <li>⏱️ Countdown before each round.</li>
       </ul>
-      <p><b>Link:</b> <a href="https://sentient-tower.vercel.app" target="_blank">sentient-tower.vercel.app</a></p>
     `,
     creator: "0xBalls",
     creatorLink: "https://twitter.com/0xBalls",
@@ -108,7 +103,6 @@ const games = [
         <li>Defeat enemies and clear levels.</li>
         <li>Reload and upgrade weapons between rounds.</li>
       </ul>
-      <p><b>Link:</b> <a href="https://otherdev.com/hazmob" target="_blank">otherdev.com/hazmob</a></p>
     `,
     creator: "DevX Studios",
     creatorLink: "https://twitter.com/devxstudios",
