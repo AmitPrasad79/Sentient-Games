@@ -8,82 +8,25 @@
 </head>
 <body>
   <header>
-    <h1>🎮 Games Hub</h1>
+    <h1><span class="highlight">Games</span> Hub</h1>
     <input type="text" id="search" placeholder="Search games..." />
   </header>
 
   <main>
     <section class="category">
       <h2>Sentient Originals</h2>
-      <div class="game-grid">
-        <div class="game-card">
-          <div class="thumbnail">
-            <img src="dogrunner-thumb.png" alt="Sentient Dog Runner" />
-            <video src="dogrunner-preview.mp4" muted loop></video>
-            <button class="play-btn">▶ Play</button>
-          </div>
-          <h3>Sentient Dog Runner</h3>
-          <p>by 0xBalls</p>
-        </div>
-
-        <div class="game-card">
-          <div class="thumbnail">
-            <img src="pong-thumb.png" alt="Sentient Pong" />
-            <video src="pong-preview.mp4" muted loop></video>
-            <button class="play-btn">▶ Play</button>
-          </div>
-          <h3>Sentient Pong</h3>
-          <p>by 0xBalls</p>
-        </div>
-
-        <div class="game-card">
-          <div class="thumbnail">
-            <img src="memory-thumb.png" alt="Sentient Memory Match" />
-            <video src="memory-preview.mp4" muted loop></video>
-            <button class="play-btn">▶ Play</button>
-          </div>
-          <h3>Sentient Memory Match</h3>
-          <p>by 0xBalls</p>
-        </div>
-
-        <div class="game-card">
-          <div class="thumbnail">
-            <img src="puzzle-thumb.png" alt="Sentient Puzzle Slide" />
-            <video src="puzzle-preview.mp4" muted loop></video>
-            <button class="play-btn">▶ Play</button>
-          </div>
-          <h3>Sentient Puzzle Slide</h3>
-          <p>by 0xBalls</p>
-        </div>
-      </div>
-
-        <div class="game-card">
-          <div class="thumbnail">
-            <img src="tower-thumb.png" alt="Sentient Tower" />
-            <video src="tower-preview.mp4" muted loop></video>
-            <button class="play-btn">▶ Play</button>
-          </div>
-          <h3>Sentient Tower</h3>
-          <p>by 0xBalls</p>
-        </div>
-      </div>
+      <div class="games-grid" id="sentient-originals"></div>
     </section>
 
     <section class="category">
       <h2>Dev Games</h2>
-      <div class="game-grid">
-        <div class="game-card">
-          <div class="thumbnail">
-            <img src="hazmob-thumb.png" alt="HAZMOB FPS" />
-            <video src="hazmob-preview.mp4" muted loop></video>
-            <button class="play-btn">▶ Play</button>
-          </div>
-          <h3>HAZMOB FPS</h3>
-          <p>by DevX Studios</p>
-        </div>
-      </div>
+      <div class="games-grid" id="dev-games"></div>
     </section>
   </main>
+
+  <footer>
+    <p>© 2025 Games Hub — Created by Amit Prasad</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
