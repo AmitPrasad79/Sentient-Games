@@ -1,205 +1,111 @@
-:root{
-  --bg:#0b0d10;
-  --card:#0f1317;
-  --muted:#9aa3b2;
-  --accent:#ff6b6b;
-  --glass: rgba(255,255,255,0.03);
-  --radius:12px;
-  --max-width:1200px;
-  --gap:18px;
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f3f4f6;
+  color: #222;
+  margin: 0;
+  padding: 0;
 }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:linear-gradient(180deg,#040405 0%, #0b0d10 100%);
-  color:#e6eef6;
-  -webkit-font-smoothing:antialiased;
-  min-height:100vh;
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Topbar */
-.topbar{
-  display:flex;
-  align-items:center;
-  gap:16px;
-  padding:12px 20px;
-  border-bottom:1px solid rgba(255,255,255,0.03);
-  position:sticky;
-  top:0;
-  backdrop-filter: blur(6px);
-  z-index:40;
-}
-.logo{font-weight:700; font-size:20px}
-.logo span{color:var(--accent); margin-left:6px}
-
-/* Layout */
-.container{
-  max-width:var(--max-width);
-  margin:20px auto;
-  padding:0 18px 80px;
+header h1 {
+  font-size: 1.5rem;
+  color: #333;
 }
 
-/* Hero */
-.hero{
-  background: linear-gradient(90deg, rgba(255,107,107,0.06), rgba(0,0,0,0.0));
-  border-radius:var(--radius);
-  padding:22px;
-  margin-bottom:18px;
-  display:flex;
-  flex-direction:column;
-}
-.hero h1{margin:0 0 6px; font-size:22px}
-.hero p{margin:0; color:var(--muted)}
-
-/* Section header */
-.section{margin-top:24px}
-.section-header{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px}
-.section-header h2{margin:0}
-.viewmore{color:var(--muted); font-size:13px; text-decoration:none}
-
-/* Grid */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap:var(--gap);
+header input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 200px;
 }
 
-/* Card */
-.card{
-  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
-  border-radius:12px;
-  overflow:hidden;
-  position:relative;
-  min-height:140px;
-  transition:transform .18s ease, box-shadow .18s;
-  border:1px solid rgba(255,255,255,0.03);
-}
-.card:hover{transform:translateY(-6px); box-shadow:0 10px 30px rgba(0,0,0,0.6)}
-
-/* thumbnail area */
-.thumb{
-  position:relative;
-  height:130px;
-  background:#0a0a0a;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.thumb img, .thumb video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+main {
+  padding: 2rem;
 }
 
-/* small label */
-.tag{
-  position:absolute;
-  left:10px;
-  top:8px;
-  background:rgba(0,0,0,0.5);
-  padding:6px 8px;
-  border-radius:8px;
-  font-size:12px;
-  color: #fff;
+.category {
+  margin-bottom: 3rem;
 }
 
-/* overlay play button on card (bottom-right) */
-.card-play{
-  position:absolute;
-  right:8px;
-  bottom:8px;
-  background:linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.25));
-  border-radius:10px;
-  padding:6px 8px;
-  font-size:13px;
-  color:#fff;
-  text-decoration:none;
-  display:flex;
-  gap:6px;
-  align-items:center;
+.category h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #444;
 }
 
-/* content */
-.card-body{
-  padding:10px 12px;
-}
-.card-title{font-size:15px; margin:0 0 6px}
-.card-meta{font-size:12px; color:var(--muted)}
-
-/* Modal */
-.modal{
-  position:fixed;
-  inset:0;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  background: linear-gradient(180deg, rgba(1,2,3,0.6), rgba(1,2,3,0.8));
-  z-index:60;
-}
-.modal.show{display:flex}
-.modal-content{
-  width:min(920px,95%);
-  background:var(--card);
-  border-radius:14px;
-  padding:16px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.7);
-  border:1px solid rgba(255,255,255,0.03);
-}
-.modal-close{
-  position:absolute;
-  right:16px;
-  top:14px;
-  background:transparent;
-  border:none;
-  color:#fff;
-  font-size:28px;
-  cursor:pointer;
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
-/* modal layout */
-.modal-body{
-  display:flex;
-  gap:18px;
-  align-items:flex-start;
+.game-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
 }
-.modal-media{
-  width:48%;
-  position:relative;
-  background:#050607;
-  border-radius:10px;
-  overflow:hidden;
-  min-height:220px;
-}
-.modal-media video, .modal-media img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-.modal-info{width:52%}
-.modal-info h3{margin:0 0 8px}
-.modal-info p{color:var(--muted); line-height:1.4}
-.credits{margin-top:12px; color:var(--muted)}
-.modal-actions{margin-top:18px; display:flex; gap:12px}
 
-/* Buttons */
-.btn{
-  padding:10px 14px;
-  border-radius:10px;
-  text-decoration:none;
-  display:inline-block;
-  color:#fff;
-  font-weight:600;
+.game-card:hover {
+  transform: translateY(-5px);
 }
-.btn.play{background:linear-gradient(90deg,var(--accent), #ff9b6b)}
-.btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
 
-/* Responsive */
-@media (max-width:860px){
-  .modal-body{flex-direction:column}
-  .modal-media, .modal-info{width:100%}
-  .grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.thumbnail img,
+.thumbnail video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.play-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: #0078ff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.play-btn:hover {
+  background: #005ecc;
+}
+
+.game-card h3 {
+  margin: 0.8rem 1rem 0 1rem;
+}
+
+.game-card p {
+  margin: 0.4rem 1rem 1rem 1rem;
+  color: #777;
+  font-size: 0.9rem;
 }
