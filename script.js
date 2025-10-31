@@ -6,7 +6,7 @@ const games = [
     rating: 4.8,
     thumb: "assets/dog-runner.jpg",
     video: "assets/dog-runner-preview.mp4",
-    url: "https://yourgamehost.com/dog-runner"
+    url: "https://sentient-dog-runner.vercel.app"
   },
   {
     title: "Sentient Pong",
@@ -15,7 +15,7 @@ const games = [
     rating: 4.6,
     thumb: "assets/pong.jpg",
     video: "assets/pong-preview.mp4",
-    url: "https://yourgamehost.com/pong"
+    url: "https://sentient-pong.vercel.app"
   },
   {
     title: "Sentient Memory Match",
@@ -24,7 +24,7 @@ const games = [
     rating: 4.9,
     thumb: "assets/memory.jpg",
     video: "assets/memory-preview.mp4",
-    url: "https://yourgamehost.com/memory"
+    url: "https://sentient-memory-match.vercel.app"
   },
   {
     title: "Sentient Puzzle Slide",
@@ -33,7 +33,7 @@ const games = [
     rating: 4.7,
     thumb: "assets/puzzle-slide.jpg",
     video: "assets/puzzle-preview.mp4",
-    url: "https://yourgamehost.com/puzzle-slide"
+    url: "https://sentient-memory-match.vercel.app"
   },
   {
     title: "Sentient Tower",
@@ -42,7 +42,7 @@ const games = [
     rating: 4.8,
     thumb: "assets/tower.jpg",
     video: "assets/tower-preview.mp4",
-    url: "https://yourgamehost.com/tower"
+    url: "https://sentient-tower.vercel.app"
   },
   {
     title: "HAZMOB FPS",
