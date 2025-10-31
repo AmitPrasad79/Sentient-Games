@@ -69,7 +69,7 @@ function renderGames() {
 
 renderGames();
 
-// 🔍 Search filter
+// 🔍 Search Filter
 document.getElementById("search").addEventListener("input", (e) => {
   const query = e.target.value.toLowerCase();
   document.querySelectorAll(".game-card").forEach(card => {
