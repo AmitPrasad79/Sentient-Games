@@ -6,9 +6,9 @@ const GAMES = [
     title: "Sentient Dog Runner",
     desc: "Endless runner with pickups and upgrades.",
     dev: "Amit Prasad",
-    thumb: "assets/dog-runner.jpg",   // thumbnail image
-    preview: "assets/dog-runner-preview.mp4", // short muted mp4/webm for hover
-    url: "https://yourgamehost.com/dog-runner" // link where 'Play' goes
+    thumb: "assets/dog-runner.jpg",
+    preview: "assets/dog-runner-preview.mp4",
+    url: "https://yourgamehost.com/dog-runner"
   },
   {
     id: "pong",
@@ -60,7 +60,7 @@ const GAMES = [
 ];
 
 // === Render helper ===
-function createCard(game){
+function createCard(game) {
   const el = document.createElement('article');
   el.className = 'card';
   el.innerHTML = `
@@ -75,75 +75,73 @@ function createCard(game){
       <div class="card-meta">${game.dev}</div>
     </div>
   `;
-  // hover video handlers:
+
   const thumb = el.querySelector('.thumb');
   const img = thumb.querySelector('img');
   const vid = thumb.querySelector('video');
 
-  // Setup sources
-  if (game.preview){
+  if (game.preview) {
     vid.src = game.preview;
     vid.style.display = 'none';
   }
 
-  // Start preview on hover / touch / drag over
-  thumb.addEventListener('mouseenter', async ()=>{
+  // Hover preview logic
+  thumb.addEventListener('mouseenter', async () => {
     if (!vid.src) return;
     img.style.display = 'none';
     vid.style.display = 'block';
-    try{ await vid.play() }catch(e){}
+    try { await vid.play(); } catch (e) {}
   });
-  thumb.addEventListener('mouseleave', ()=>{
+  thumb.addEventListener('mouseleave', () => {
     if (!vid.src) return;
     vid.pause();
+    vid.currentTime = 0;
     vid.style.display = 'none';
     img.style.display = 'block';
   });
 
-  // Touch support (tap to preview)
-  thumb.addEventListener('touchstart', (ev)=>{
+  // Touch (mobile) support
+  thumb.addEventListener('touchstart', (ev) => {
     ev.stopPropagation();
     if (!vid.src) return;
-    const playing = !!(vid.currentTime > 0 && !vid.paused && !vid.ended && vid.readyState > 2);
-    if (playing){
-      vid.pause(); vid.style.display='none'; img.style.display='block';
+    const playing = !vid.paused;
+    if (playing) {
+      vid.pause(); vid.style.display = 'none'; img.style.display = 'block';
     } else {
-      img.style.display='none'; vid.style.display='block'; vid.play().catch(()=>{});
+      img.style.display = 'none'; vid.style.display = 'block'; vid.play().catch(() => {});
     }
   });
 
-  // open modal when clicking card except clicking play overlay
-  el.addEventListener('click', (e)=>{
-    if (e.target.closest('.card-play')) return; // play overlay click handled separately
+  // Open modal when clicking card
+  el.addEventListener('click', (e) => {
+    if (e.target.closest('.card-play')) return;
     openModal(game);
   });
 
-  // overlay play button click
-  el.querySelector('.card-play').addEventListener('click', (e)=>{
+  // Play overlay button
+  el.querySelector('.card-play').addEventListener('click', (e) => {
     e.stopPropagation();
-    // open modal and focus Play button
     openModal(game, true);
   });
 
   return el;
 }
 
-// populate grids
+// === Populate grids ===
 const originalsGrid = document.getElementById('originals-grid');
 const communityGrid = document.getElementById('community-grid');
 
-function init(){
-  // split: first 5 are originals (this is flexible — edit GAMES array)
-  const originals = GAMES.slice(0,5);
+function init() {
+  const originals = GAMES.slice(0, 5);
   const community = GAMES.slice(5);
 
   originals.forEach(g => originalsGrid.appendChild(createCard(g)));
   community.forEach(g => communityGrid.appendChild(createCard(g)));
 
-  // search
-  document.getElementById('search').addEventListener('input', (e)=>{
+  // Search
+  document.getElementById('search').addEventListener('input', (e) => {
     const q = e.target.value.toLowerCase();
-    document.querySelectorAll('.card').forEach(card=>{
+    document.querySelectorAll('.card').forEach(card => {
       const t = card.querySelector('.card-title').textContent.toLowerCase();
       card.style.display = t.includes(q) ? '' : 'none';
     });
@@ -163,35 +161,35 @@ const modalPlay = document.getElementById('modal-play');
 const modalCredits = document.getElementById('modal-credits');
 const closeBtn = document.getElementById('modal-close');
 
-function openModal(game, autoplay=false){
+function openModal(game, autoplay = false) {
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
 
   modalTitle.textContent = game.title;
   modalDesc.textContent = game.desc;
-  modalDev.textContent = game.dev;
+  modalDev.textContent = `By ${game.dev}`;
 
-  // show video if available else thumb
   modalThumb.style.display = 'none';
   modalVideo.style.display = 'none';
   modalVideo.pause();
-  if (game.preview){
+
+  if (game.preview) {
     modalVideo.src = game.preview;
     modalVideo.style.display = 'block';
     modalVideo.muted = true;
-    if (autoplay) modalVideo.play().catch(()=>{});
+    if (autoplay) modalVideo.play().catch(() => {});
   } else {
     modalThumb.src = game.thumb;
     modalThumb.style.display = 'block';
   }
 
   modalPlay.href = game.url;
-  modalCredits.href = game.url; // change if you have dev page
-  modalPlay.setAttribute('target','_blank');
-  modalCredits.setAttribute('target','_blank');
+  modalCredits.href = game.url;
+  modalPlay.setAttribute('target', '_blank');
+  modalCredits.setAttribute('target', '_blank');
 }
 
-function closeModal(){
+function closeModal() {
   modal.classList.remove('show');
   document.body.style.overflow = '';
   modalVideo.pause();
@@ -199,9 +197,9 @@ function closeModal(){
 }
 
 closeBtn.addEventListener('click', closeModal);
-modal.addEventListener('click', (e)=>{
+modal.addEventListener('click', (e) => {
   if (e.target === modal) closeModal();
 });
-document.addEventListener('keydown', (e)=>{
+document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
