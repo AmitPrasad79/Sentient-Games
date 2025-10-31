@@ -163,3 +163,10 @@ footer {
   color: #aaa;
   margin-top: 30px;
 }
+
+.credits {
+  font-size: 0.9em;
+  color: #666;
+  margin: 4px 0 8px;
+}
+
