@@ -1,68 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sentient Games — Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="logo">Sentient <span>Games</span></div>
-    <div class="search-wrap">
-      <input id="search" placeholder="Search games..." />
-    </div>
+  <header>
+    <h1>🎮 Games Hub</h1>
+    <input type="text" id="search" placeholder="Search games..." />
   </header>
 
-  <main class="container">
-    <!-- Highlight / Hero -->
-    <section class="hero">
-      <h1>Play Sentient & Community Games</h1>
-      <p>Curated hub for your projects and other devs — no login, fast, and game-first.</p>
-    </section>
-
-    <!-- Sections -->
-    <section class="section" id="sentient-originals">
-      <div class="section-header">
-        <h2>Sentient Originals</h2>
-        <a class="viewmore" href="#">View more</a>
-      </div>
-      <div class="grid" id="originals-grid"></div>
-    </section>
-
-    <section class="section" id="community-games">
-      <div class="section-header">
-        <h2>Dev Games</h2>
-        <a class="viewmore" href="#">View more</a>
-      </div>
-      <div class="grid" id="community-grid"></div>
-    </section>
-
-  </main>
-
-  <!-- Modal -->
-  <div id="game-modal" class="modal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-modal="true">
-      <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
-
-      <div class="modal-body">
-        <div class="modal-media">
-          <video id="modal-video" muted loop playsinline preload="metadata"></video>
-          <img id="modal-thumb" alt="" />
-        </div>
-
-        <div class="modal-info">
-          <h3 id="modal-title"></h3>
-          <p id="modal-desc"></p>
-          <p class="credits">Dev: <span id="modal-dev"></span></p>
-          <div class="modal-actions">
-            <a id="modal-play" class="btn play">Play</a>
-            <a id="modal-credits" class="btn ghost" target="_blank" rel="noopener">Dev Page</a>
+  <main>
+    <section class="category">
+      <h2>Sentient Originals</h2>
+      <div class="game-grid">
+        <div class="game-card">
+          <div class="thumbnail">
+            <img src="dogrunner-thumb.png" alt="Sentient Dog Runner" />
+            <video src="dogrunner-preview.mp4" muted loop></video>
+            <button class="play-btn">▶ Play</button>
           </div>
+          <h3>Sentient Dog Runner</h3>
+          <p>by Amit Prasad</p>
+        </div>
+
+        <div class="game-card">
+          <div class="thumbnail">
+            <img src="pong-thumb.png" alt="Sentient Pong" />
+            <video src="pong-preview.mp4" muted loop></video>
+            <button class="play-btn">▶ Play</button>
+          </div>
+          <h3>Sentient Pong</h3>
+          <p>by Amit Prasad</p>
+        </div>
+
+        <div class="game-card">
+          <div class="thumbnail">
+            <img src="memory-thumb.png" alt="Sentient Memory Match" />
+            <video src="memory-preview.mp4" muted loop></video>
+            <button class="play-btn">▶ Play</button>
+          </div>
+          <h3>Sentient Memory Match</h3>
+          <p>by Amit Prasad</p>
+        </div>
+
+        <div class="game-card">
+          <div class="thumbnail">
+            <img src="puzzle-thumb.png" alt="Sentient Puzzle Slide" />
+            <video src="puzzle-preview.mp4" muted loop></video>
+            <button class="play-btn">▶ Play</button>
+          </div>
+          <h3>Sentient Puzzle Slide</h3>
+          <p>by Amit Prasad</p>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+
+    <section class="category">
+      <h2>Dev Games</h2>
+      <div class="game-grid">
+        <div class="game-card">
+          <div class="thumbnail">
+            <img src="hazmob-thumb.png" alt="HAZMOB FPS" />
+            <video src="hazmob-preview.mp4" muted loop></video>
+            <button class="play-btn">▶ Play</button>
+          </div>
+          <h3>HAZMOB FPS</h3>
+          <p>by DevX Studios</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
