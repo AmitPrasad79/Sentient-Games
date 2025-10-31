@@ -37,7 +37,7 @@ const games = [
   },
   {
     title: "Sentient Tower",
-    desc: "🏰 How to Play: Defend the tower from waves of enemies with sentient powers!",
+    desc: "Sentient Tower is a fast-paced reflex and precision stacking game built with HTML5 Canvas, JavaScript, and CSS3. Your goal is to build a perfectly aligned tower that reaches the golden goal line without missing a block!",
     creator: "0xBalls",
     rating: 4.8,
     thumb: "assets/tower.jpg",
