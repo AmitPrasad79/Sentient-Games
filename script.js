@@ -74,16 +74,16 @@ const games = [
   },
   {
     title: "Sentient Tower",
-    desc: "🏗️ Stack moving blocks to reach the goal line!",
+    desc: "🏗️ Your goal is to build a perfectly aligned tower that reaches the golden goal line without missing a block!",
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
-        <li>🧱 Stack moving blocks as high as possible.</li>
-        <li>⭐ Reach the <b>goal line</b> to win.</li>
-        <li>💀 Miss a block — your tower collapses!</li>
-        <li>⚡ Choose difficulty: Easy / Medium / Hard.</li>
-        <li>🔁 Reset or Restart anytime.</li>
-        <li>⏱️ Countdown before each round.</li>
+        <li>Stack moving blocks as high as possible.</li>
+        <li>Reach the <b>goal line</b> to win.</li>
+        <li>Miss a block — your tower collapses!</li>
+        <li>Choose difficulty: Easy / Medium / Hard.</li>
+        <li>Reset or Restart anytime.</li>
+        <li>Countdown before each round.</li>
       </ul>
     `,
     creator: "0xBalls",
