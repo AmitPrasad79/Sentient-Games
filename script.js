@@ -180,7 +180,14 @@ function renderGames(list = games) {
 
 function openModal(g) {
   modal.style.display = "flex";
+
+  // Setup video autoplay (muted for browser autoplay rules)
   modalVideo.src = g.video;
+  modalVideo.muted = true;
+  modalVideo.load();
+  modalVideo.play().catch(() => {}); // prevent error if user interaction needed
+
+  // Fill in modal details
   modalTitle.textContent = g.title;
   modalDesc.textContent = g.desc;
   modalCreator.textContent = g.creator;
@@ -191,15 +198,19 @@ function openModal(g) {
   playNow.onclick = () => window.open(g.url, "_blank");
 }
 
+// Close modal and stop video
 closeModal.onclick = () => {
   modal.style.display = "none";
   modalVideo.pause();
+  modalVideo.currentTime = 0; // reset video to start
 };
 
+// Close on outside click
 window.onclick = (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
     modalVideo.pause();
+    modalVideo.currentTime = 0;
   }
 };
 
