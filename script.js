@@ -1,112 +1,100 @@
-const games = {
-  "sentient-originals": [
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("gameModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalCreator = document.getElementById("modalCreator");
+  const modalRating = document.getElementById("modalRating");
+  const modalStars = document.getElementById("modalStars");
+  const modalVideo = document.getElementById("modalVideo");
+  const closeModal = document.getElementById("closeModal");
+
+  const games = [
     {
       title: "Sentient Dog Runner",
-      author: "Amit Prasad",
-      image: "images/dog-runner.jpg",
-      description: "🏃 How to Play:\nUse arrow keys to jump and slide to dodge obstacles. Collect coins to unlock upgrades!",
-      rating: 4.8,
+      desc: "Use arrow keys to jump and slide to dodge obstacles. Collect coins to unlock upgrades!",
+      creator: "Amit Prasad",
+      rating: "4.8",
+      stars: 5,
+      video: "videos/dog-runner.mp4",
       link: "#"
     },
     {
       title: "Sentient Pong",
-      author: "Amit Prasad",
-      image: "images/pong.jpg",
-      description: "🎮 How to Play:\nUse your mouse to control the paddle. Don’t let the ball pass your side!",
-      rating: 4.5,
+      desc: "Play against smart AI and test your reflexes in this modern Pong remake.",
+      creator: "Amit Prasad",
+      rating: "4.7",
+      stars: 4,
+      video: "videos/pong.mp4",
       link: "#"
     },
     {
       title: "Sentient Memory Match",
-      author: "Amit Prasad",
-      image: "images/memory.jpg",
-      description: "🧠 How to Play:\nFlip cards and find matching pairs within the time limit.",
-      rating: 4.6,
+      desc: "Train your memory with beautiful cards — match pairs and score high!",
+      creator: "Amit Prasad",
+      rating: "4.9",
+      stars: 5,
+      video: "videos/memory.mp4",
       link: "#"
     },
     {
       title: "Sentient Puzzle Slide",
-      author: "Amit Prasad",
-      image: "images/puzzle.jpg",
-      description: "🧩 How to Play:\nSlide tiles to form the complete image before the timer runs out.",
-      rating: 4.7,
-      link: "#"
-    },
-    {
-      title: "Sentient Tower",
-      author: "Amit Prasad",
-      image: "images/tower.jpg",
-      description: "🗼 How to Play:\nDefend your tower from waves of enemies using special powers.",
-      rating: 4.9,
+      desc: "Slide tiles to complete the image — test your logic and patience!",
+      creator: "Amit Prasad",
+      rating: "4.6",
+      stars: 4,
+      video: "videos/puzzle.mp4",
       link: "#"
     }
-  ],
-  "dev-games": [
-    {
-      title: "HAZMOB FPS",
-      author: "DevX Studios",
-      image: "images/hazmob.jpg",
-      description: "🔫 How to Play:\nMove with WASD, shoot with left-click, aim with right-click. Eliminate enemies and win!",
-      rating: 4.3,
-      link: "#"
-    }
-  ]
-};
+  ];
 
-// Render Games
-function renderGames() {
-  for (const category in games) {
-    const container = document.getElementById(category);
-    games[category].forEach((game) => {
-      const card = document.createElement("div");
-      card.classList.add("game-card");
-      card.innerHTML = `
-        <img src="${game.image}" alt="${game.title}">
-        <div class="game-info">
-          <h3>${game.title}</h3>
-          <p>${game.description.split('\n')[0]}</p>
-          <p><small>By ${game.author}</small></p>
-          <a href="${game.link}" class="play-btn">Play</a>
-        </div>
-      `;
-      card.addEventListener("click", () => openModal(game));
-      container.appendChild(card);
+  // Handle hover to play preview video
+  const cards = document.querySelectorAll(".game-card");
+  cards.forEach((card, i) => {
+    const img = card.querySelector("img");
+    const video = document.createElement("video");
+    video.src = games[i].video;
+    video.muted = true;
+    video.loop = true;
+    video.classList.add("preview-video");
+
+    card.addEventListener("mouseenter", () => {
+      img.style.display = "none";
+      card.appendChild(video);
+      video.play();
     });
-  }
-}
 
-// Modal Handling
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-image");
-const modalTitle = document.getElementById("modal-title");
-const modalDesc = document.getElementById("modal-desc");
-const modalAuthor = document.getElementById("modal-author");
-const modalRating = document.getElementById("modal-rating");
-const modalPlay = document.getElementById("modal-play");
-const closeModalBtn = document.getElementById("close-modal");
+    card.addEventListener("mouseleave", () => {
+      video.pause();
+      video.remove();
+      img.style.display = "block";
+    });
 
-function openModal(game) {
-  modal.classList.add("show");
-  modalImg.src = game.image;
-  modalTitle.textContent = game.title;
-  modalDesc.textContent = game.description;
-  modalAuthor.textContent = game.author;
-  modalRating.innerHTML = "⭐".repeat(Math.round(game.rating)) + ` (${game.rating})`;
-  modalPlay.href = game.link;
-}
+    // On click — open popup modal
+    const btn = card.querySelector(".play-btn");
+    btn.addEventListener("click", () => {
+      modal.classList.add("active");
+      modalTitle.textContent = games[i].title;
+      modalDesc.textContent = games[i].desc;
+      modalCreator.textContent = `Created by ${games[i].creator}`;
+      modalRating.textContent = `(${games[i].rating})`;
 
-closeModalBtn.addEventListener("click", () => modal.classList.remove("show"));
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.classList.remove("show");
-});
+      // Create stars
+      modalStars.innerHTML = "";
+      for (let s = 0; s < games[i].stars; s++) {
+        const star = document.createElement("span");
+        star.textContent = "⭐";
+        modalStars.appendChild(star);
+      }
 
-renderGames();
+      // Set modal video
+      modalVideo.src = games[i].video;
+      modalVideo.play();
+    });
+  });
 
-// Search
-document.getElementById("search").addEventListener("input", (e) => {
-  const q = e.target.value.toLowerCase();
-  document.querySelectorAll(".game-card").forEach((card) => {
-    const title = card.querySelector("h3").textContent.toLowerCase();
-    card.style.display = title.includes(q) ? "block" : "none";
+  // Close modal
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+    modalVideo.pause();
   });
 });
