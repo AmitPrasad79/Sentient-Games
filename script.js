@@ -84,7 +84,7 @@ function renderGames() {
       </div>
       <div class="game-info">
         <h3>${g.title}</h3>
-        <p class="credits">Credits: ${g.creator}</p>
+        <p class="credits">Creator ${g.creator}</p>
         <button class="play-btn">How to Play</button>
       </div>
     `;
