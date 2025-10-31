@@ -20,7 +20,7 @@ const games = [
   },
   {
     title: "Sentient Pong",
-    desc: "🏓 Classic pong — beat the AI and claim victory!",
+    desc: "🏓 A modern, playful spin on the classic Pong featuring a sentient ball, sudden-death rounds, and a persistent scoreboard.",
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
@@ -40,7 +40,7 @@ const games = [
   },
   {
     title: "Sentient Memory Match",
-    desc: "🧠 Flip cards and match pairs to win!",
+    desc: "🧠 Flip cards, find pairs, beat the clock, test your sentient brainpower across multiple difficulties.",
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
