@@ -5,10 +5,10 @@ const games = [
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
-        <li>🏃 Use <b>Arrow Keys</b> to jump or slide.</li>
-        <li>💰 Collect coins to unlock upgrades.</li>
-        <li>🚧 Avoid obstacles or lose a life.</li>
-        <li>🎯 Survive as long as you can to set a high score.</li>
+        <li>Spacebar or Tap anywhere to jump.</li>
+        <li>The longer you survive the faster the world moves.</li>
+        <li>Avoid obstacles or lose a life.</li>
+        <li>Miss a jump and it’s game over.</li>
       </ul>
     `,
     creator: "0xBalls",
@@ -24,9 +24,11 @@ const games = [
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
-        <li>Move paddle using <b>Arrow Keys</b>.</li>
-        <li>Prevent the ball from passing your paddle.</li>
-        <li>Score 10 points to win!</li>
+        <li>First to score wins in Sudden Death Mode.</li>
+        <li>Play against a chill AI opponent.</li>
+        <li>Track wins, losses, and total games.</li>
+        <li>Use W/S, Arrow Keys, Mouse, or Touch to play.</li>
+        <li>Works great on any device like desktop, tablet, or phone.</li>
       </ul>
     `,
     creator: "0xBalls",
@@ -42,9 +44,10 @@ const games = [
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
-        <li>Flip two cards at a time to find identical pairs.</li>
-        <li>Clear the board before time runs out.</li>
-        <li>Track your score and speed with each match.</li>
+        <li>Choose a grid size (4×4, 6×6, 8×8, or 10×10).</li>
+        <li>Cards shuffle randomly every round.</li>
+        <li>Beat the timer by uncovering all pairs.</li>
+        <li>Lose if the clock hits zero.</li>
       </ul>
     `,
     creator: "0xBalls",
@@ -60,9 +63,10 @@ const games = [
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
-        <li>Slide tiles using mouse or touch to form the full image.</li>
-        <li>Preview the image before countdown starts.</li>
-        <li>One extra empty tile lets you move tiles easily.</li>
+        <li>Pick your challenge with 3×3, 4×4, or 5×5 grids.</li>
+        <li>Test your memory in Memorize Mode.</li>
+        <li>Enjoy a new random image every round.</li>
+        <li>Play anywhere with a responsive design made for desktop and mobile.</li>
       </ul>
     `,
     creator: "0xBalls",
@@ -80,7 +84,7 @@ const games = [
       <ul>
         <li>Stack moving blocks as high as possible.</li>
         <li>Reach the <b>goal line</b> to win.</li>
-        <li>Miss a block — your tower collapses!</li>
+        <li>If miss a block then your tower collapses!</li>
         <li>Choose difficulty: Easy / Medium / Hard.</li>
         <li>Reset or Restart anytime.</li>
         <li>Countdown before each round.</li>
