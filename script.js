@@ -46,7 +46,16 @@ const GAMES = [
     preview: "assets/tower-preview.mp4",
     url: "https://yourgamehost.com/tower"
   },
-
+  {
+    id: "tower",
+    title: "Sentient Tower",
+    desc: "Tower defense with unique sentient enemies.",
+    dev: "Amit Prasad",
+    thumb: "assets/tower.jpg",
+    preview: "assets/tower-preview.mp4",
+    url: "https://yourgamehost.com/tower"
+  },
+  
   // Example of community game
   {
     id: "hazmob",
