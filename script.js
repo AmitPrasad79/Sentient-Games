@@ -1,8 +1,19 @@
 const games = [
   {
     title: "Sentient Dog Runner",
-    desc: "🐕 How to Play: Use arrow keys to jump and slide to dodge obstacles. Collect coins to unlock upgrades!",
+    desc: "🐕 Run, jump, and dodge obstacles as fast as you can!",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>🏃 Use <b>Arrow Keys</b> to jump or slide.</li>
+        <li>💰 Collect coins to unlock upgrades.</li>
+        <li>🚧 Avoid obstacles or lose a life.</li>
+        <li>🎯 Survive as long as you can to set a high score.</li>
+      </ul>
+      <p><b>Link:</b> <a href="https://sentient-dog-runner.vercel.app" target="_blank">sentient-dog-runner.vercel.app</a></p>
+    `,
     creator: "0xBalls",
+    creatorLink: "https://twitter.com/0xBalls",
     rating: 4.8,
     thumb: "assets/dog-runner.jpg",
     video: "assets/dog-runner-preview.mp4",
@@ -10,8 +21,18 @@ const games = [
   },
   {
     title: "Sentient Pong",
-    desc: "🏓 How to Play: Control your paddle and beat the AI by scoring more points!",
+    desc: "🏓 Classic pong — beat the AI and claim victory!",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Move paddle using <b>Arrow Keys</b>.</li>
+        <li>Prevent the ball from passing your paddle.</li>
+        <li>Score 10 points to win!</li>
+      </ul>
+      <p><b>Link:</b> <a href="https://sentient-pong.vercel.app" target="_blank">sentient-pong.vercel.app</a></p>
+    `,
     creator: "0xBalls",
+    creatorLink: "https://twitter.com/0xBalls",
     rating: 4.6,
     thumb: "assets/pong.jpg",
     video: "assets/pong-preview.mp4",
@@ -19,8 +40,18 @@ const games = [
   },
   {
     title: "Sentient Memory Match",
-    desc: "🧠 How to Play: Match all image pairs before time runs out!",
+    desc: "🧠 Flip cards and match pairs to win!",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Flip two cards at a time to find identical pairs.</li>
+        <li>Clear the board before time runs out.</li>
+        <li>Track your score and speed with each match.</li>
+      </ul>
+      <p><b>Link:</b> <a href="https://sentient-memory-match.vercel.app" target="_blank">sentient-memory-match.vercel.app</a></p>
+    `,
     creator: "0xBalls",
+    creatorLink: "https://twitter.com/0xBalls",
     rating: 4.9,
     thumb: "assets/memory.jpg",
     video: "assets/memory-preview.mp4",
@@ -28,8 +59,18 @@ const games = [
   },
   {
     title: "Sentient Puzzle Slide",
-    desc: "🧩 How to Play: Slide tiles to recreate the original image as fast as possible!",
+    desc: "🧩 Slide tiles to recreate the original image.",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Slide tiles using mouse or touch to form the full image.</li>
+        <li>Preview the image before countdown starts.</li>
+        <li>One extra empty tile lets you move tiles easily.</li>
+      </ul>
+      <p><b>Link:</b> <a href="https://sentient-memory-match.vercel.app" target="_blank">sentient-puzzle-slide.vercel.app</a></p>
+    `,
     creator: "0xBalls",
+    creatorLink: "https://twitter.com/0xBalls",
     rating: 4.7,
     thumb: "assets/puzzle-slide.jpg",
     video: "assets/puzzle-preview.mp4",
@@ -37,8 +78,21 @@ const games = [
   },
   {
     title: "Sentient Tower",
-    desc: "Sentient Tower is a fast-paced reflex and precision stacking game built with HTML5 Canvas, JavaScript, and CSS3. Your goal is to build a perfectly aligned tower that reaches the golden goal line without missing a block!",
+    desc: "🏗️ Stack moving blocks to reach the goal line!",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>🧱 Stack moving blocks as high as possible.</li>
+        <li>⭐ Reach the <b>goal line</b> to win.</li>
+        <li>💀 Miss a block — your tower collapses!</li>
+        <li>⚡ Choose difficulty: Easy / Medium / Hard.</li>
+        <li>🔁 Reset or Restart anytime.</li>
+        <li>⏱️ Countdown before each round.</li>
+      </ul>
+      <p><b>Link:</b> <a href="https://sentient-tower.vercel.app" target="_blank">sentient-tower.vercel.app</a></p>
+    `,
     creator: "0xBalls",
+    creatorLink: "https://twitter.com/0xBalls",
     rating: 4.8,
     thumb: "assets/tower.jpg",
     video: "assets/tower-preview.mp4",
@@ -46,8 +100,18 @@ const games = [
   },
   {
     title: "HAZMOB FPS",
-    desc: "🔫 How to Play: Move with WASD, aim and shoot enemies to survive rounds!",
+    desc: "🔫 Action-packed FPS game. Aim, shoot, and survive!",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Use <b>WASD</b> to move, <b>Mouse</b> to aim.</li>
+        <li>Defeat enemies and clear levels.</li>
+        <li>Reload and upgrade weapons between rounds.</li>
+      </ul>
+      <p><b>Link:</b> <a href="https://otherdev.com/hazmob" target="_blank">otherdev.com/hazmob</a></p>
+    `,
     creator: "DevX Studios",
+    creatorLink: "https://twitter.com/devxstudios",
     rating: 4.5,
     thumb: "assets/hazmob.jpg",
     video: "assets/hazmob-preview.mp4",
@@ -65,6 +129,7 @@ const modalDesc = document.getElementById("modalDesc");
 const modalCreator = document.getElementById("modalCreator");
 const modalStars = document.getElementById("modalStars");
 const modalRating = document.getElementById("modalRating");
+const modalDesc2 = document.getElementById("modalDesc2");
 const playNow = document.getElementById("playNow");
 const closeModal = document.getElementById("closeModal");
 
@@ -84,18 +149,18 @@ function renderGames(list = games) {
       </div>
       <div class="game-info">
         <h3>${g.title}</h3>
-        <p class="credits">Creator ${g.creator}</p>
+        <p class="credits">Creator <a href="${g.creatorLink}" target="_blank">${g.creator}</a></p>
         <button class="play-btn">How to Play</button>
       </div>
     `;
 
-    // Hover video preview
+    // Hover preview
     const img = card.querySelector("img");
     const vid = card.querySelector("video");
     card.addEventListener("mouseenter", () => {
       img.style.display = "none";
       vid.style.display = "block";
-      vid.play().catch(()=>{});
+      vid.play().catch(() => {});
     });
     card.addEventListener("mouseleave", () => {
       vid.pause();
@@ -103,10 +168,8 @@ function renderGames(list = games) {
       img.style.display = "block";
     });
 
-    // Open popup on click anywhere
+    // Open modal on click
     card.addEventListener("click", () => openModal(g));
-
-    // Prevent double open when pressing the button
     card.querySelector(".play-btn").addEventListener("click", (e) => {
       e.stopPropagation();
       openModal(g);
@@ -123,8 +186,10 @@ function openModal(g) {
   modalTitle.textContent = g.title;
   modalDesc.textContent = g.desc;
   modalCreator.textContent = g.creator;
+  modalCreator.href = g.creatorLink;
   modalRating.textContent = `(${g.rating})`;
   modalStars.innerHTML = "⭐".repeat(Math.round(g.rating));
+  modalDesc2.innerHTML = g.desc2;
   playNow.onclick = () => window.open(g.url, "_blank");
 }
 
@@ -140,20 +205,17 @@ window.onclick = (e) => {
   }
 };
 
-// --- Search Functionality ---
+// Search
 const searchInput = document.getElementById("search");
-
 searchInput.addEventListener("input", (e) => {
   const query = e.target.value.toLowerCase();
-
-  const filteredGames = games.filter(
+  const filtered = games.filter(
     (g) =>
       g.title.toLowerCase().includes(query) ||
       g.desc.toLowerCase().includes(query) ||
       g.creator.toLowerCase().includes(query)
   );
-
-  renderGames(filteredGames);
+  renderGames(filtered);
 });
 
 renderGames();
