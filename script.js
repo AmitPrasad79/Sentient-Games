@@ -2,7 +2,7 @@ const games = [
   {
     title: "Sentient Dog Runner",
     desc: "🐕 How to Play: Use arrow keys to jump and slide to dodge obstacles. Collect coins to unlock upgrades!",
-    creator: "Amit Prasad",
+    creator: "0xBalls",
     rating: 4.8,
     thumb: "assets/dog-runner.jpg",
     video: "assets/dog-runner-preview.mp4",
@@ -11,7 +11,7 @@ const games = [
   {
     title: "Sentient Pong",
     desc: "🏓 How to Play: Control your paddle and beat the AI by scoring more points!",
-    creator: "Amit Prasad",
+    creator: "0xBalls",
     rating: 4.6,
     thumb: "assets/pong.jpg",
     video: "assets/pong-preview.mp4",
@@ -20,7 +20,7 @@ const games = [
   {
     title: "Sentient Memory Match",
     desc: "🧠 How to Play: Match all image pairs before time runs out!",
-    creator: "Amit Prasad",
+    creator: "0xBalls",
     rating: 4.9,
     thumb: "assets/memory.jpg",
     video: "assets/memory-preview.mp4",
@@ -29,7 +29,7 @@ const games = [
   {
     title: "Sentient Puzzle Slide",
     desc: "🧩 How to Play: Slide tiles to recreate the original image as fast as possible!",
-    creator: "Amit Prasad",
+    creator: "0xBalls",
     rating: 4.7,
     thumb: "assets/puzzle-slide.jpg",
     video: "assets/puzzle-preview.mp4",
@@ -38,7 +38,7 @@ const games = [
   {
     title: "Sentient Tower",
     desc: "🏰 How to Play: Defend the tower from waves of enemies with sentient powers!",
-    creator: "Amit Prasad",
+    creator: "0xBalls",
     rating: 4.8,
     thumb: "assets/tower.jpg",
     video: "assets/tower-preview.mp4",
