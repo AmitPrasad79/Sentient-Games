@@ -405,3 +405,47 @@ body.modal-open {
   }
 }
 
+/* 📱 Mobile optimization for Sentient Tower info section */
+@media (max-width: 768px) {
+  .game-info-card {
+    width: 85%;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+
+  .game-info-card h3,
+  .game-info-card h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .game-info-card ul {
+    padding-left: 1.2rem;
+  }
+
+  .game-info-card li {
+    margin-bottom: 4px;
+  }
+
+  /* prevent any horizontal scroll */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* make overall section centered and tighter */
+  .section, .content {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0 10px;
+  }
+
+  /* smaller play button for phones */
+  .play-btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    border-radius: 8px;
+  }
+}
