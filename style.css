@@ -141,13 +141,30 @@ main {
   margin-bottom: 15px;
 }
 
+/* ===== Close Button Styling ===== */
 .close {
   position: absolute;
-  right: 15px;
-  top: 10px;
-  font-size: 24px;
+  top: -12px; /* move slightly above the white modal */
+  right: -12px;
+  background: #fff;
+  color: #ff6600;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
   cursor: pointer;
-  color: #ff7b00;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 1001;
+}
+
+.close:hover {
+  background: #ff6600;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 .rating {
