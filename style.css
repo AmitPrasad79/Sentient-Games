@@ -399,3 +399,19 @@ body.modal-open {
     max-width: 90%;
   }
 }
+
+/* Prevent over-stretching when filtering/searching */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  justify-content: center; /* keeps layout centered */
+  align-items: start;
+}
+
+@media (min-width: 1600px) {
+  .games-grid {
+    max-width: 1400px; /* prevents boxes from stretching too far */
+    margin: 0 auto;
+  }
+}
