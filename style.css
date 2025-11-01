@@ -144,8 +144,8 @@ main {
 /* ===== Close Button Styling ===== */
 .close {
   position: absolute;
-  top: -12px; /* move slightly above the white modal */
-  right: -12px;
+  top: -20px; /* move slightly above the white modal */
+  right: -20px;
   background: #fff;
   color: #ff6600;
   border-radius: 50%;
