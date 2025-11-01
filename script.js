@@ -13,7 +13,7 @@ const games = [
     `,
     creator: "0xBalls",
     creatorLink: "https://twitter.com/0xBalls",
-    rating: 4.8,
+    rating: 2.8,
     thumb: "assets/dog-runner.jpg",
     video: "assets/dog-runner-preview.mp4",
     url: "https://sentient-dog-runner.vercel.app"
@@ -98,22 +98,24 @@ const games = [
     url: "https://sentient-tower.vercel.app"
   },
   {
-    title: "HAZMOB FPS",
-    desc: "🔫 Action-packed FPS game. Aim, shoot, and survive!",
+    title: "Dobby the Catcher",
+    desc: "In Dobby the Catcher you control a dog with the objective to collect 10 butterflies while navigating obstacles and hazards",
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
-        <li>Use <b>WASD</b> to move, <b>Mouse</b> to aim.</li>
-        <li>Defeat enemies and clear levels.</li>
-        <li>Reload and upgrade weapons between rounds.</li>
+        <li>Collect 10 butterflies to win while dodging bees and hazards..</li>
+        <li>Use WASD or Arrow Keys to move, P to pause, R to restart.</li>
+        <li>Track lives and score as you navigate the field.</li>
+        <li>You have 3 lives to collect all 10 butterflies.<li>
+        <li>Bees are evil.</li>
       </ul>
     `,
-    creator: "DevX Studios",
-    creatorLink: "https://twitter.com/devxstudios",
+    creator: "0xDexDuck",
+    creatorLink: "https://x.com/0xDexDuck",
     rating: 4.5,
-    thumb: "assets/hazmob.jpg",
-    video: "assets/hazmob-preview.mp4",
-    url: "https://otherdev.com/hazmob"
+    thumb: "assets/dobby-catcher.jpg",
+    video: "assets/dobby-preview.mp4",
+    url: "https://sentient-dobby-the-catcher.vercel.app"
   }
 ];
 
