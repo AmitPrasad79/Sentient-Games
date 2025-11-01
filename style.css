@@ -386,3 +386,22 @@ body.modal-open {
   }
 }
 
+/* Fix for mobile layout alignment */
+@media (max-width: 768px) {
+  .game-info-card {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    overflow-x: hidden;
+  }
+
+  .game-container, .section, .content {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
