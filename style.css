@@ -455,3 +455,11 @@ body.modal-open {
   margin: 6px auto 0;
   border-radius: 2px;
 }
+
+.game-card video {
+  width: 100%;
+  height: 200px; /* You can adjust to 220px or 240px if you want bigger previews */
+  object-fit: cover; /* fills box, crops extra black parts */
+  border-radius: 10px;
+  background-color: #000;
+}
