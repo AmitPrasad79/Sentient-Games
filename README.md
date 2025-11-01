@@ -29,3 +29,4 @@ It’s designed to highlight indie creations with an elegant card layout, instan
 
 ## 🧑‍💻 Adding more games soon
 
+---
