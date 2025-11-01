@@ -429,3 +429,36 @@ body.modal-open {
     font-size: 20px;
   }
 }
+
+/* Prevent single search result from stretching full width */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Limit the card width and center it */
+.game-card {
+  max-width: 320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Ensure thumbnail looks proper */
+.thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.thumb img,
+.thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
