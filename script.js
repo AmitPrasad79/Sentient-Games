@@ -113,7 +113,7 @@ const games = [
     creator: "0xDexDuck",
     creatorLink: "https://x.com/0xDexDuck",
     rating: 4.5,
-    thumb: "assets/dobby-catcher.jpg",
+    thumb: "assets/dobby-catcher.png",
     video: "assets/dobby-preview.mp4",
     url: "https://sentient-dobby-the-catcher.vercel.app"
   }
