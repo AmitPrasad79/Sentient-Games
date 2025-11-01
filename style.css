@@ -455,3 +455,90 @@ body.modal-open {
   margin: 6px auto 0;
   border-radius: 2px;
 }
+
+/* ===== Header Section ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f0f0f;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+/* Left section (logo + title) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo image */
+.site-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Title styling */
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.white {
+  color: #fff;
+}
+
+.orange {
+  color: #ff8000;
+}
+
+/* Search bar styling */
+#search {
+  width: 260px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: #1b1b1b;
+  color: #fff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#search:focus {
+  box-shadow: 0 0 6px #ff8000;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .header-left h1 {
+    font-size: 1.5rem;
+  }
+
+  .site-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  #search {
+    width: 90%;
+  }
+}
