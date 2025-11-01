@@ -119,7 +119,6 @@ const games = [
   }
 ];
 
-// DOM elements
 const originalsContainer = document.getElementById("sentient-originals");
 const devContainer = document.getElementById("dev-games");
 const modal = document.getElementById("gameModal");
@@ -154,7 +153,6 @@ function renderGames(list = games) {
       </div>
     `;
 
-    // Hover preview
     const img = card.querySelector("img");
     const vid = card.querySelector("video");
     card.addEventListener("mouseenter", () => {
@@ -168,7 +166,6 @@ function renderGames(list = games) {
       img.style.display = "block";
     });
 
-    // Open modal on click
     card.addEventListener("click", () => openModal(g));
     card.querySelector(".play-btn").addEventListener("click", (e) => {
       e.stopPropagation();
@@ -182,15 +179,13 @@ function renderGames(list = games) {
 
 function openModal(g) {
   modal.style.display = "flex";
-  document.body.classList.add("modal-open"); // stop background scroll
+  document.body.classList.add("modal-open"); 
 
-  // Setup video autoplay (muted for browser autoplay rules)
   modalVideo.src = g.video;
   modalVideo.muted = true;
   modalVideo.load();
   modalVideo.play().catch(() => {});
 
-  // Fill in modal details
   modalTitle.textContent = g.title;
   modalDesc.textContent = g.desc;
   modalCreator.textContent = g.creator;
@@ -203,7 +198,7 @@ function openModal(g) {
 
 closeModal.onclick = () => {
   modal.style.display = "none";
-  document.body.classList.remove("modal-open"); // allow background scroll again
+  document.body.classList.remove("modal-open"); 
   modalVideo.pause();
   modalVideo.currentTime = 0;
 };
@@ -217,7 +212,6 @@ window.onclick = (e) => {
   }
 };
 
-// Search
 const searchInput = document.getElementById("search");
 searchInput.addEventListener("input", (e) => {
   const query = e.target.value.toLowerCase();
