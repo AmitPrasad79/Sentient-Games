@@ -74,7 +74,7 @@ const games = [
     rating: 4.7,
     thumb: "assets/puzzle-slide.jpg",
     video: "assets/puzzle-preview.mp4",
-    url: "https://sentient-memory-match.vercel.app"
+    url: "https://sentient-puzzle-slide.vercel.app"
   },
   {
     title: "Sentient Tower",
