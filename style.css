@@ -434,3 +434,24 @@ body.modal-open {
     margin: 0 auto;
   }
 }
+
+.category h2 {
+  color: #ff7b00;
+  border-left: 4px solid #ff7b00;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-left: none; /* remove side line when centering */
+  position: relative;
+}
+
+/* Add orange line under the centered title */
+.category h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff7b00;
+  margin: 6px auto 0;
+  border-radius: 2px;
+}
