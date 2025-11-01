@@ -66,23 +66,36 @@ main {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  width: 100%;
-  aspect-ratio: 16 / 9; /* ✅ Keeps perfect widescreen ratio */
+  width: 280px; /* ✅ fixed reasonable thumbnail width */
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
   background: #000;
+  flex-shrink: 0; /* ✅ prevents resizing inside flex container */
+  margin: auto;
 }
 
 .thumb img,
 .thumb video {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ✅ Prevents stretch */
+  object-fit: cover; /* ✅ fills nicely without weird black borders */
   object-position: center;
   display: block;
   border-radius: 10px;
 }
 
-.thumb video {
-  display: none;
+/* ✅ Responsive: smaller thumbnails on mobile */
+@media (max-width: 768px) {
+  .thumb {
+    width: 200px;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumb {
+    width: 150px;
+  }
 }
 
 .game-info {
