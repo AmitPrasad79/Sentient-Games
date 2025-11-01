@@ -246,3 +246,35 @@ footer {
   text-decoration: underline;
 }
 
+/* ===== Modal Scroll Fix for Mobile ===== */
+#gameModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto; /* <-- enable scroll */
+  padding: 30px 10px;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 480px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 90vh; /* <-- keep modal inside viewport */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body.modal-open {
+  overflow: hidden; /* prevent background scroll */
+}
+
