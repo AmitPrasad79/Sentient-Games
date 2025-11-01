@@ -34,7 +34,7 @@ const games = [
     creator: "0xBalls",
     creatorLink: "https://twitter.com/0xBalls",
     rating: 4.6,
-    thumb: "assets/pong.png",
+    thumb: "assets/pong.jpg",
     video: "assets/pong-preview.mp4",
     url: "https://sentient-pong.vercel.app"
   },
