@@ -198,7 +198,7 @@ function renderGames(list = games) {
     card.innerHTML = `
       <div class="thumb">
         <img src="${g.thumb}" alt="${g.title}">
-        <video class="preview-video" muted loop preload="metadata" playsinline>
+        <video class="preview-video" muted loop preload="metadata">
           <source src="${g.video}" type="video/mp4">
         </video>
       </div>
@@ -211,8 +211,6 @@ function renderGames(list = games) {
 
     const img = card.querySelector("img");
     const vid = card.querySelector("video");
-
-    // Desktop hover preview
     card.addEventListener("mouseenter", () => {
       img.style.display = "none";
       vid.style.display = "block";
@@ -224,7 +222,6 @@ function renderGames(list = games) {
       img.style.display = "block";
     });
 
-    // Open modal
     card.addEventListener("click", () => openModal(g));
     card.querySelector(".play-btn").addEventListener("click", (e) => {
       e.stopPropagation();
@@ -234,13 +231,11 @@ function renderGames(list = games) {
     if (i < 5) originalsContainer.appendChild(card);
     else devContainer.appendChild(card);
   });
-
-  enableMobileScrollAutoplay();
 }
 
 function openModal(g) {
   modal.style.display = "flex";
-  document.body.classList.add("modal-open");
+  document.body.classList.add("modal-open"); 
 
   modalVideo.src = g.video;
   modalVideo.muted = true;
@@ -259,7 +254,7 @@ function openModal(g) {
 
 closeModal.onclick = () => {
   modal.style.display = "none";
-  document.body.classList.remove("modal-open");
+  document.body.classList.remove("modal-open"); 
   modalVideo.pause();
   modalVideo.currentTime = 0;
 };
@@ -284,31 +279,5 @@ searchInput.addEventListener("input", (e) => {
   );
   renderGames(filtered);
 });
-
-// ✅ Mobile scroll autoplay
-function enableMobileScrollAutoplay() {
-  const videos = document.querySelectorAll(".preview-video");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const video = entry.target;
-        const img = video.previousElementSibling;
-        if (entry.isIntersecting) {
-          img.style.display = "none";
-          video.style.display = "block";
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-          video.style.display = "none";
-          img.style.display = "block";
-        }
-      });
-    },
-    { threshold: 0.6 }
-  );
-
-  videos.forEach((v) => observer.observe(v));
-}
 
 renderGames();
