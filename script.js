@@ -172,6 +172,26 @@ const games = [
     thumb: "assets/smart-senti.png",
     video: "assets/smart-senti-preview.mp4",
     url: "https://smart-senti-words.vercel.app"
+  },
+  {
+    title: "Sky Dodger",
+    desc: "In Sky Dodger, navigate your custom ball through the endless skies, dodging falling obstacles and testing your reflexes to the limit.",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Control your ball using <b>Arrow Keys (← →)</b> or <b>A / D</b> to dodge incoming objects.</li>
+        <li>Click <b>Restart</b> to begin your sky run and challenge your reaction speed.</li>
+        <li>Customize your ball with your own <b>PNG</b> or <b>JPG</b> image for a personal touch.</li>
+        <li>Survive as long as possible while the sky grows faster and more chaotic.</li>
+        <li>Smooth sky visuals and fluid motion make every run a thrilling escape.</li>
+      </ul>
+    `,
+    creator: "aptos_king",
+    creatorLink: "https://x.com/yousufaziz00",
+    rating: 4.4,
+    thumb: "assets/sky-dodger.png",
+    video: "assets/sky-dodger-preview.mp4",
+    url: "https://built-a-mini-game-for-sentient-agi.vercel.app"
   }
 ];
 
