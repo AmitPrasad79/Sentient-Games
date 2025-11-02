@@ -8,27 +8,9 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/logo.png" />
   <link rel="apple-touch-icon" href="assets/logo.png" />
   <meta name="theme-color" content="#0d0d0d" />
-  <style>
-  /* Make sure the background canvas sits correctly behind everything */
-  #bgCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-    background: transparent;
-  }
-
-  /* Everything else should be above the canvas */
-  body, .game-container, #app, section, .popup, #footer {
-    position: relative;
-    z-index: 2;
-  }
-  </style>
 </head>
 <body>
+  <canvas id="bgCanvas"></canvas>
   <header>
     <h1><span class="white">Games</span><span class="orange">Hub</span></h1>
     <input type="text" id="search" placeholder="Search games..." />
