@@ -116,6 +116,25 @@ const games = [
     thumb: "assets/dobby-catcher.png",
     video: "assets/dobby-preview.mp4",
     url: "https://sentient-dobby-the-catcher.vercel.app"
+  },
+  {
+    title: "Senti TicTacToe",
+    desc: "In Senti TicTacToe, you challenge the AI in the ultimate duel of logic and strategy on a futuristic grid.",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Strategize to align three marks (❌ or ⭕) before your opponent.</li>
+        <li>The AI adapts it learns and blocks your every move.</li>
+        <li>Track score as you navigate the field.</li>
+        <li>Clean futuristic visuals with smooth win animations</li>
+      </ul>
+    `,
+    creator: "rawakinode",
+    creatorLink: "https://x.com/rawakinode",
+    rating: 4.5,
+    thumb: "assets/senti-tictactoe.png",
+    video: "assets/tictactoe-preview.mp4",
+    url: "https://sentictactoe-game.vercel.app"
   }
 ];
 
