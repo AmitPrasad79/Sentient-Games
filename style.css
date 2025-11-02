@@ -448,17 +448,20 @@ body.modal-open {
   display: none !important;
 }
 
+/* === Animated Background (Sentient particles) === */
 #bgCanvas {
   position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 0;
-  background: radial-gradient(circle at center, #0a0013 20%, #000 100%);
   pointer-events: none;
-  overflow: hidden;
+  background: transparent;
 }
-header, main, footer {
+
+/* Make sure all content stays above the animation */
+body, header, main, footer, .modal {
   position: relative;
   z-index: 2;
 }
