@@ -84,7 +84,7 @@ const games = [
       <ul>
         <li>Stack moving blocks as high as possible.</li>
         <li>Reach the <b>goal line</b> to win.</li>
-        <li>If miss a block then your tower collapses!</li>
+        <li>If miss a block then your tower collapses.</li>
         <li>Choose difficulty: Easy / Medium / Hard.</li>
         <li>Reset or Restart anytime.</li>
         <li>Countdown before each round.</li>
@@ -103,7 +103,7 @@ const games = [
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
-        <li>Collect 10 butterflies to win while dodging bees and hazards..</li>
+        <li>Collect 10 butterflies to win while dodging bees and hazards.</li>
         <li>Use WASD or Arrow Keys to move, P to pause, R to restart.</li>
         <li>Track lives and score as you navigate the field.</li>
         <li>You have 3 lives to collect all 10 butterflies.<li>
@@ -126,7 +126,7 @@ const games = [
         <li>Strategize to align three marks (❌ or ⭕) before your opponent.</li>
         <li>The AI adapts it learns and blocks your every move.</li>
         <li>Track score as you navigate the field.</li>
-        <li>Clean futuristic visuals with smooth win animations</li>
+        <li>Clean futuristic visuals with smooth win animations.</li>
       </ul>
     `,
     creator: "rawakinode",
@@ -142,18 +142,36 @@ const games = [
     desc2: `
       <h3>🎮 Gameplay Overview</h3>
       <ul>
-        <li>Slide and merge identical number tiles to evolve your Sentient core..</li>
-        <li>Use Arrow Keys or Swipe to move tiles in any direction..</li>
-        <li>Each merge increases your intelligence level</li>
+        <li>Slide and merge identical number tiles to evolve your Sentient core.</li>
+        <li>Use Arrow Keys or Swipe to move tiles in any direction.</li>
+        <li>Each merge increases your intelligence level.</li>
         <li>Plan moves carefully, as the grid fills up with every turn.</li>
       </ul>
     `,
     creator: "Barrel",
     creatorLink: "https://x.com/Barrel_9x",
-    rating: 4.5,
+    rating: 4.7,
     thumb: "assets/sentient-2048.png",
     video: "assets/sentient-2048-preview.mp4",
     url: "https://sentient-2048.vercel.app"
+  },
+  {
+    title: "Smart Senti Words",
+    desc: "In Smart Senti Words, test your mind by uncovering all the hidden words.",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Find and identify all words that secretly contain the letters.</li>
+        <li>Challenge your vocabulary, memory, and observation skills.</li>
+        <li>Clean, minimalist design with glowing word effects for each discovery.</li>
+      </ul>
+    `,
+    creator: "Elliottyu",
+    creatorLink: "https://x.com/cotantanax",
+    rating: 4.4,
+    thumb: "assets/smart-senti.png",
+    video: "assets/smart-senti-preview.mp4",
+    url: "https://smart-senti-words.vercel.app"
   }
 ];
 
