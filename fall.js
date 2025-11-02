@@ -8,56 +8,54 @@ function resizeBg() {
 window.addEventListener("resize", resizeBg);
 resizeBg();
 
+// Load Sentient logo
 const img = new Image();
-img.src = "./images/sentient.png";
-
-let balls = [];
+img.src = "./assets/logo.png"; // You already have this logo
 let imageLoaded = false;
-
 img.onload = () => {
   imageLoaded = true;
-  console.log("✅ Sentient background image loaded");
+  console.log("✅ Sentient logo loaded for background");
 };
 
-function createBall() {
-  balls.push({
+let particles = [];
+
+function createParticle() {
+  particles.push({
     x: Math.random() * bgCanvas.width,
     y: -50,
-    size: Math.random() * 40 + 25,
-    speed: Math.random() * 1.2 + 0.4,
+    size: Math.random() * 45 + 25,
+    speed: Math.random() * 1 + 0.3,
     rotation: Math.random() * 360,
-    rotationSpeed: Math.random() * 0.6 - 0.3,
-    glow: Math.random() * 6 + 4
+    rotationSpeed: Math.random() * 0.5 - 0.25,
+    alpha: Math.random() * 0.5 + 0.5
   });
 }
 
 setInterval(() => {
-  if (balls.length < 7) createBall();
-}, 800);
+  if (particles.length < 8) createParticle();
+}, 900);
 
-function drawBall(b) {
+function drawParticle(p) {
   ctx.save();
-  ctx.translate(b.x, b.y);
-  ctx.rotate((b.rotation * Math.PI) / 180);
-  ctx.globalAlpha = 0.85;
-  ctx.shadowBlur = b.glow;
-  ctx.shadowColor = "#ff9f43";
-  ctx.drawImage(img, -b.size / 2, -b.size / 2, b.size, b.size);
+  ctx.translate(p.x, p.y);
+  ctx.rotate((p.rotation * Math.PI) / 180);
+  ctx.globalAlpha = p.alpha;
+  ctx.shadowBlur = 15;
+  ctx.shadowColor = "rgba(255, 140, 0, 0.6)";
+  ctx.drawImage(img, -p.size / 2, -p.size / 2, p.size, p.size);
   ctx.restore();
 }
 
 function update() {
   ctx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
-
   if (imageLoaded) {
-    for (let b of balls) {
-      b.y += b.speed;
-      b.rotation += b.rotationSpeed;
-      drawBall(b);
+    for (let p of particles) {
+      p.y += p.speed;
+      p.rotation += p.rotationSpeed;
+      drawParticle(p);
     }
-    balls = balls.filter(b => b.y < bgCanvas.height + 50);
+    particles = particles.filter(p => p.y < bgCanvas.height + 50);
   }
-
   requestAnimationFrame(update);
 }
 
