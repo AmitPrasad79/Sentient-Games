@@ -17,7 +17,7 @@ window.addEventListener("resize", resizeBg);
 resizeBg();
 
 const img = new Image();
-img.src = "./images/sentient.png";
+img.src = "/assets/sentient.png";
 
 let balls = [];
 
