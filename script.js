@@ -168,7 +168,7 @@ const games = [
     `,
     creator: "Elliottyu",
     creatorLink: "https://x.com/cotantanax",
-    rating: 4.4,
+    rating: 4.3,
     thumb: "assets/smart-senti.png",
     video: "assets/smart-senti-preview.mp4",
     url: "https://smart-senti-words.vercel.app"
@@ -188,10 +188,28 @@ const games = [
     `,
     creator: "aptos_king",
     creatorLink: "https://x.com/yousufaziz00",
-    rating: 4.4,
+    rating: 4.2,
     thumb: "assets/sky-dodger.png",
     video: "assets/sky-dodger-preview.mp4",
     url: "https://built-a-mini-game-for-sentient-agi.vercel.app"
+  },
+  {
+    title: "Sentient Dobby Maze",
+    desc: "In Sentient Dobby Maze, guide Dobby through a neon labyrinth against the clock reach the exit.",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Navigate a shifting maze and reach the exit.</li>
+        <li>Use the <b>Arrow Keys</b> (Up / Down / Left / Right) to move Dobby through the corridors.</li>
+        <li>Win the game within 60s otherwise you will be out.</li>
+      </ul>
+    `,
+    creator: "prith_boy",
+    creatorLink: "https://x.com/prith_boy",
+    rating: 4.2,
+    thumb: "assets/dobby-maze.png",
+    video: "assets/dobby-maze-preview.mp4",
+    url: "https://sentient-dobby-maze.vercel.app"
   }
 ];
 
