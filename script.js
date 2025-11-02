@@ -135,6 +135,25 @@ const games = [
     thumb: "assets/senti-tictactoe.png",
     video: "assets/tictactoe-preview.mp4",
     url: "https://sentictactoe-game.vercel.app"
+  },
+  {
+    title: "Sentient 2048",
+    desc: "In Sentient 2048, you merge digital intelligence blocks to awaken a higher form of consciousness.",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Slide and merge identical number tiles to evolve your Sentient core..</li>
+        <li>Use Arrow Keys or Swipe to move tiles in any direction..</li>
+        <li>Each merge increases your intelligence level</li>
+        <li>Plan moves carefully, as the grid fills up with every turn.</li>
+      </ul>
+    `,
+    creator: "Barrel",
+    creatorLink: "https://x.com/Barrel_9x",
+    rating: 4.5,
+    thumb: "assets/sentient-2048.png",
+    video: "assets/sentient-2048-preview.mp4",
+    url: "https://sentient-2048.vercel.app"
   }
 ];
 
