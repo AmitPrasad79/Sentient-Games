@@ -9,7 +9,7 @@ window.addEventListener("resize", resizeBg);
 resizeBg();
 
 const img = new Image();
-img.src = "assets/sentient.png"; // ✅ update path for GamesHub
+img.src = "assets/sentient.png"; // ✅ Use your GamesHub asset path
 
 let balls = [];
 
@@ -17,22 +17,22 @@ function createBall() {
   balls.push({
     x: Math.random() * bgCanvas.width,
     y: -50,
-    size: Math.random() * 50 + 40, // slightly larger for big screens
-    speed: Math.random() * 1.5 + 0.4,
+    size: Math.random() * 50 + 35, // bigger for wide screens
+    speed: Math.random() * 1.5 + 0.5,
     rotation: Math.random() * 360,
-    rotationSpeed: Math.random() * 0.8 - 0.4,
+    rotationSpeed: Math.random() * 1.2 - 0.6,
   });
 }
 
 setInterval(() => {
-  if (balls.length < 8) createBall();
-}, 700);
+  if (balls.length < 10) createBall();
+}, 600);
 
 function drawBall(b) {
   ctx.save();
   ctx.translate(b.x, b.y);
   ctx.rotate((b.rotation * Math.PI) / 180);
-  ctx.globalAlpha = 0.9;
+  ctx.globalAlpha = 0.85;
   ctx.drawImage(img, -b.size / 2, -b.size / 2, b.size, b.size);
   ctx.restore();
 }
