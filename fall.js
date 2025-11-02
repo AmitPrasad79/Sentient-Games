@@ -8,9 +8,8 @@ function resizeBg() {
 window.addEventListener("resize", resizeBg);
 resizeBg();
 
-// Load Sentient logo
 const img = new Image();
-img.src = "./assets/logo.png"; // You already have this logo
+img.src = "./assets/logo.png"; 
 let imageLoaded = false;
 img.onload = () => {
   imageLoaded = true;
