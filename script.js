@@ -210,6 +210,25 @@ const games = [
     thumb: "assets/dobby-maze.png",
     video: "assets/dobby-maze-preview.mp4",
     url: "https://sentient-dobby-maze.vercel.app"
+  },
+  {
+    title: "Sentient Car",
+    desc: "In Sentient Car, race through futuristic tracks and reach the finish line before your fuel runs out speed, strategy, and precision decide your fate!",
+    desc2: `
+      <h3>🎮 Gameplay Overview</h3>
+      <ul>
+        <li>Control your Sentient-powered car and race against time and fuel limits.</li>
+        <li>Use the <b>Arrow Keys</b> to accelerate, brake, and steer through dynamic obstacles.</li>
+        <li>Avoid crashes every hit drains fuel faster and slows your momentum.</li>
+        <li>Finish the course before the tank hits zero to prove your Sentient driving skills.</li>
+      </ul>
+    `,
+    creator: "Netmeti",
+    creatorLink: "https://x.com/Netmeti",
+    rating: 4.2,
+    thumb: "assets/sentient-car.png",
+    video: "assets/sentient-car-preview.mp4",
+    url: "https://netmeti.github.io/Dobby-KaitoAl"
   }
 ];
 
