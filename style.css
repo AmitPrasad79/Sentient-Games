@@ -465,3 +465,24 @@ body, header, main, footer, .modal {
   position: relative;
   z-index: 2;
 }
+
+/* === Footer should stick to bottom === */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: #0d0d0d;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 14px;
+  border-top: 1px solid #222;
+  z-index: 5;
+}
+
+/* Add spacing so content doesn't hide behind footer */
+main {
+  padding-bottom: 80px;
+}
+
